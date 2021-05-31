@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import Week8Todo from "@/components/Week8Todo.vue"
+import Week8Todo from "@/components/Take2Todo.vue"
 export default {
   name: "App",
   components: {
