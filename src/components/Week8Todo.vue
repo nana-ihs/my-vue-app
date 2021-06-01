@@ -1,11 +1,13 @@
 <template>
   <div class="todolist">
-    <h1>Todoリスト</h1>
+    <h1 class="todolist_title">Todoリスト</h1>
     <div class="add-form">
-      コメント
-      <input type="text" placeholder="タスクを入力" v-model="inputTodo" />
-      <button v-on:click="addTodo">追加</button>
-      <div v-for="item in items" v-bind:key="item.id">
+      <div class="add-form_input">
+        コメント
+        <input type="text" placeholder="タスクを入力" v-model="inputTodo" />
+        <button v-on:click="addTodo">追加</button>
+      </div>
+      <div class="status" v-for="item in items" v-bind:key="item.id">
         <input
           type="radio"
           name="show"
@@ -75,7 +77,27 @@ export default {
 }
 </script>
 <style scoped>
+.todolist {
+  margin-left: 50px;
+}
 .todo__text--done {
-  text-decoration-line: line-through;
+  color: #a9a9a9;
+}
+.todolist_title {
+  margin-top: 50px;
+}
+
+.status {
+  display: inline-block;
+  justify-content: space-between;
+}
+.todo {
+  display: flex;
+}
+.todo__text {
+  margin-left: 10px;
+}
+.todo__delete {
+  margin-left: 10px;
 }
 </style>

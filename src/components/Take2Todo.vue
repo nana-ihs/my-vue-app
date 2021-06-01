@@ -77,19 +77,27 @@ export default {
 }
 </script>
 <style scoped>
+.todolist {
+  margin-left: 50px;
+}
 .todo__text--done {
-  text-decoration-line: line-through;
+  color: #a9a9a9;
 }
 .todolist_title {
-  text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
-.comment {
-}
-.add-form_input {
-  text-align: center;
-}
+
 .status {
   display: inline-block;
+  justify-content: space-between;
+}
+.todo {
+  display: flex;
+}
+.todo__text {
+  margin-left: 10px;
+}
+.todo__delete {
+  margin-left: 10px;
 }
 </style>
