@@ -42,6 +42,7 @@
   </div>
 </template>
 <script>
+import firebase from "firebase" //追加した
 export default {
   data() {
     return {
@@ -59,6 +60,7 @@ export default {
     addTodo() {
       if (this.inputTodo !== "") {
         this.todos.push({ text: this.inputTodo, isDone: false })
+        firebase.firestore().collection("memos").add({ text: this.inputTodo })
       }
       this.inputTodo = ""
     },
